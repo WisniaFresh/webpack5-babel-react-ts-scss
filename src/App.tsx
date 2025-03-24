@@ -1,22 +1,14 @@
-import { useState } from "react";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Navigation from './components/Navigation/Navigation';
 
 const App = () => {
-    const [counter, setCounter] = useState(0);
-
-    const showALog = (num: Number) => {
-        console.log(`Number now is:`, num);
-    } 
-
     return (
-        <div>
-            {`Hello to my application, let's count clicks: ${counter}`}
-            <button onClick={() => {
-                setCounter(prev => prev + 1 )
-            }}>Add</button>
-
-            <button onClick={() => showALog(counter)}>SHOW LOG</button>
-        </div>
-    )
-}
+      <div>
+        <Navigation />
+        <Outlet />
+      </div>
+    );
+  };
 
 export default App;
