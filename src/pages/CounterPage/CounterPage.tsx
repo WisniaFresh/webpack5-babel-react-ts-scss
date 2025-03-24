@@ -1,6 +1,6 @@
 import { useState } from "react";
 import NavigateBackButton from "../../components/NavigateBackButton/NavigateBackButton";
-import styles from "./test.module.scss";
+import styles from "./style.module.scss";
 
 const CounterPage = () => {
     const [counter, setCounter] = useState(0);
