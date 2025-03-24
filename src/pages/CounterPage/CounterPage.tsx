@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavigateBackButton from "../../components/NavigateBackButton/NavigateBackButton";
+import styles from "./test.module.scss";
 
 const CounterPage = () => {
     const [counter, setCounter] = useState(0);
@@ -9,7 +10,7 @@ const CounterPage = () => {
     } 
 
     return (
-        <div>
+        <div className={styles.testClass}>
             <NavigateBackButton />
             {`Hello to my CounterPagelication, let's count clicks: ${counter}`}
             <button onClick={() => {
